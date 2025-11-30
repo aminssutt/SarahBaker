@@ -27,10 +27,7 @@ const About = ({ scrollY = 0 }) => {
             style={{ transform: `translateY(${parallaxOffset * 0.3}px)` }}
           >
             <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?w=800" alt="Sarah Baker Coffee intérieur" />
-            <div className="about-badge">
-              <span>Depuis</span>
-              <strong>2020</strong>
-            </div>
+            
           </motion.div>
 
           <motion.div 

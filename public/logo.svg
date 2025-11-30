@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="95" fill="#E8A0BF"/>
+  <circle cx="100" cy="100" r="85" fill="#FFF5E6"/>
+  <text x="100" y="90" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="#D4789C">Sarah</text>
+  <text x="100" y="115" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="#D4789C">Baker</text>
+  <text x="100" y="140" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#8B4513">Coffee</text>
+  <text x="100" y="165" text-anchor="middle" font-size="20">☕</text>
+</svg>

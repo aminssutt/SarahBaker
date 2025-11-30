@@ -1,0 +1,75 @@
+:root {
+  --vintage-red: #E8A0BF;
+  --vintage-cream: #F5E6D3;
+  --vintage-brown: #8B4513;
+  --dark-brown: #3D2914;
+  --vintage-gold: #D4A853;
+  --vintage-teal: #2F6B6B;
+  --off-white: #FDF8F3;
+  --black: #1a1a1a;
+  --white: #FFFFFF;
+  --dark-pink: #D4789C;
+  /* Legacy colors for compatibility */
+  --primary-pink: #E8A0BF;
+  --cream: #F5E6D3;
+  --brown: #8B4513;
+  --gold: #D4A853;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--vintage-cream);
+  color: var(--dark-brown);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Scrollbar styling - Vintage */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--vintage-cream);
+  border-left: 2px solid var(--dark-brown);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vintage-red);
+  border-radius: 0;
+  border: 2px solid var(--dark-brown);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-brown);
+}

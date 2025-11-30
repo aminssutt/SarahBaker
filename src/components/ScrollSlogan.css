@@ -1,0 +1,95 @@
+.scroll-slogan {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--cream);
+  position: relative;
+  padding: 100px 20px;
+}
+
+.slogan-container {
+  text-align: center;
+  max-width: 900px;
+}
+
+.slogan-words {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 60px;
+}
+
+.slogan-word {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--dark-brown);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.slogan-word.visible {
+  opacity: 1;
+}
+
+.slogan-word:not(:contains('•')) {
+  background: linear-gradient(135deg, var(--primary-pink), var(--dark-pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.final-slogan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.8s ease;
+}
+
+.final-slogan.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.final-slogan h2 {
+  font-size: 3.5rem;
+  color: var(--dark-pink);
+  font-style: italic;
+}
+
+.final-slogan .heart {
+  font-size: 2.5rem;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@media (max-width: 768px) {
+  .slogan-word {
+    font-size: 1.2rem;
+  }
+
+  .final-slogan h2 {
+    font-size: 1.8rem;
+  }
+
+  .final-slogan .heart {
+    font-size: 1.5rem;
+  }
+
+  .slogan-words {
+    gap: 10px;
+  }
+}

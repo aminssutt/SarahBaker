@@ -1,0 +1,146 @@
+.about {
+  background: var(--off-white);
+  padding: 100px 0;
+  position: relative;
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--vintage-red) 0px,
+    var(--vintage-red) 20px,
+    var(--off-white) 20px,
+    var(--off-white) 40px
+  );
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-image {
+  position: relative;
+}
+
+.about-image img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: 8px 8px 0 var(--vintage-red);
+  border: 4px solid var(--dark-brown);
+}
+
+.about-badge {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: var(--vintage-gold);
+  color: var(--dark-brown);
+  padding: 20px 30px;
+  border-radius: 0;
+  text-align: center;
+  box-shadow: 4px 4px 0 var(--dark-brown);
+  border: 3px solid var(--dark-brown);
+}
+
+.about-badge span {
+  display: block;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.about-badge strong {
+  font-size: 2rem;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.about-text h3 {
+  font-size: 2.5rem;
+  color: var(--vintage-red);
+  margin-bottom: 25px;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--dark-brown);
+  margin-bottom: 20px;
+}
+
+.about-features {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  background: var(--vintage-cream);
+  border-radius: 0;
+  border: 3px solid var(--dark-brown);
+  transition: all 0.3s ease;
+}
+
+.feature:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 var(--vintage-red);
+}
+
+.feature-icon {
+  font-size: 2rem;
+}
+
+.feature span:last-child {
+  font-weight: 500;
+  color: var(--dark-brown);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 968px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-image img {
+    height: 350px;
+  }
+
+  .about-badge {
+    bottom: -15px;
+    right: 20px;
+  }
+
+  .about-features {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+  }
+}

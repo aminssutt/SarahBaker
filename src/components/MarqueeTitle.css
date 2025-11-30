@@ -1,0 +1,70 @@
+/* Marquee Title - Style enseigne lumineuse vintage */
+
+.marquee-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.marquee-svg {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  min-height: 180px;
+}
+
+/* Animation de base pour les ampoules LED */
+.led-bulb {
+  transition: opacity 0.1s ease-out, filter 0.1s ease-out;
+}
+
+/* Groupe de lettres */
+.letter-group {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.letter-group rect {
+  filter: drop-shadow(0 2px 4px rgba(139, 0, 0, 0.4));
+}
+
+/* Container sans fond */
+.marquee-container {
+  padding: 30px 20px;
+  position: relative;
+  overflow: visible;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .marquee-svg {
+    max-width: 750px;
+  }
+  
+  .marquee-container {
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .marquee-svg {
+    max-width: 100%;
+  }
+  
+  .marquee-container {
+    padding: 30px 20px;
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .marquee-container {
+    padding: 25px 15px;
+    border-radius: 10px;
+  }
+  
+  .marquee-title {
+    padding: 10px 0;
+  }
+}

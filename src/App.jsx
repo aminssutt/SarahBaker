@@ -5,6 +5,7 @@ import ScrollSlogan from './components/ScrollSlogan'
 import About from './components/About'
 import Menu from './components/Menu'
 import Gallery from './components/Gallery'
+import Reviews from './components/Reviews'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import './App.css'
@@ -29,6 +30,7 @@ function App() {
       <About scrollY={scrollY} />
       <Menu scrollY={scrollY} />
       <Gallery scrollY={scrollY} />
+      <Reviews />
       <Contact scrollY={scrollY} />
       <Footer />
     </div>

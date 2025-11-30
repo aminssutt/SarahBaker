@@ -1,0 +1,240 @@
+/* Reviews Section - Style vintage américain */
+
+.reviews {
+  padding: 100px 20px;
+  background: var(--dark-brown);
+  position: relative;
+}
+
+.reviews::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--vintage-red) 0px,
+    var(--vintage-red) 20px,
+    var(--vintage-cream) 20px,
+    var(--vintage-cream) 40px
+  );
+}
+
+.reviews-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.reviews-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.google-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--vintage-cream);
+  padding: 10px 25px;
+  border-radius: 50px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.google-badge span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: var(--dark-brown);
+  font-size: 1rem;
+}
+
+.google-icon {
+  flex-shrink: 0;
+}
+
+.reviews-header h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3.5rem;
+  color: var(--vintage-cream);
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 0 var(--vintage-red);
+}
+
+.average-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.average-score {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  color: var(--vintage-red);
+}
+
+.average-stars .star {
+  font-size: 1.8rem;
+}
+
+.average-stars .star.filled {
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.average-stars .star.empty {
+  color: #666;
+}
+
+.total-reviews {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--vintage-cream);
+  opacity: 0.8;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.review-card {
+  background: var(--vintage-cream);
+  border-radius: 0;
+  padding: 25px;
+  border: 3px solid var(--dark-brown);
+  box-shadow: 6px 6px 0 var(--vintage-red);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0 var(--vintage-red);
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.reviewer-avatar {
+  width: 50px;
+  height: 50px;
+  background: var(--vintage-red);
+  color: var(--vintage-cream);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  border: 2px solid var(--dark-brown);
+}
+
+.reviewer-info h4 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem;
+  color: var(--dark-brown);
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.review-date {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.review-stars {
+  margin-bottom: 15px;
+}
+
+.review-stars .star {
+  font-size: 1.2rem;
+}
+
+.review-stars .star.filled {
+  color: #ffd700;
+}
+
+.review-stars .star.empty {
+  color: #ccc;
+}
+
+.review-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--dark-brown);
+  margin: 0;
+}
+
+.google-reviews-btn {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 15px 40px;
+  background: var(--vintage-red);
+  color: var(--vintage-cream);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  border: 3px solid var(--vintage-cream);
+  box-shadow: 4px 4px 0 var(--vintage-cream);
+  transition: all 0.3s ease;
+}
+
+.google-reviews-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--vintage-cream);
+  background: var(--dark-pink);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .reviews {
+    padding: 60px 15px;
+  }
+
+  .reviews-header h2 {
+    font-size: 2.5rem;
+  }
+
+  .average-score {
+    font-size: 2.5rem;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .reviews-header h2 {
+    font-size: 2rem;
+  }
+
+  .google-badge {
+    padding: 8px 20px;
+  }
+
+  .average-rating {
+    flex-wrap: wrap;
+  }
+
+  .google-reviews-btn {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+  }
+}
